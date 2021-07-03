@@ -11,5 +11,7 @@ namespace PruebaTecnicaReporteDeTiempo.Api.Infrastructure.Repositorios.IReposito
         string Create(Actividades actividades);
         IEnumerable<Actividades> GetAll();
         Actividades GetById(int id);
+
+        List<Actividades> GetActivitiesByUser(string idUser);
     }
 }

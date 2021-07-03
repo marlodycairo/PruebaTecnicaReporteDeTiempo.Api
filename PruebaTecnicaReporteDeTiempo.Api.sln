@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnicaReporteDeTiempo.Api", "PruebaTecnicaReporteDeTiempo\PruebaTecnicaReporteDeTiempo.Api.csproj", "{61366E65-D983-4A39-BF6E-4885277ED03B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaTecnicaReporteDeTiempo.Api", "PruebaTecnicaReporteDeTiempo\PruebaTecnicaReporteDeTiempo.Api.csproj", "{61366E65-D983-4A39-BF6E-4885277ED03B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnicaReporteDeTiempo.Api.Domain", "PruebaTecnicaReporteDeTiempo.Api.Domain\PruebaTecnicaReporteDeTiempo.Api.Domain.csproj", "{9802BB2D-EE53-4BFF-8D22-560C9DA75B90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaTecnicaReporteDeTiempo.Api.Domain", "PruebaTecnicaReporteDeTiempo.Api.Domain\PruebaTecnicaReporteDeTiempo.Api.Domain.csproj", "{9802BB2D-EE53-4BFF-8D22-560C9DA75B90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnicaReporteDeTiempo.Api.DomainServices", "PruebaTecnicaReporteDeTiempo.Api.DomainServices\PruebaTecnicaReporteDeTiempo.Api.DomainServices.csproj", "{63EAACDB-795D-4DBB-BA14-D6B83DF6A646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaTecnicaReporteDeTiempo.Api.DomainServices", "PruebaTecnicaReporteDeTiempo.Api.DomainServices\PruebaTecnicaReporteDeTiempo.Api.DomainServices.csproj", "{63EAACDB-795D-4DBB-BA14-D6B83DF6A646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnicaReporteDeTiempo.Api.Infrastructure", "PruebaTecnicaReporteDeTiempo.Api.Infrastructure\PruebaTecnicaReporteDeTiempo.Api.Infrastructure.csproj", "{2603E2E5-F884-4B3B-988F-75095B7BF933}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaTecnicaReporteDeTiempo.Api.Infrastructure", "PruebaTecnicaReporteDeTiempo.Api.Infrastructure\PruebaTecnicaReporteDeTiempo.Api.Infrastructure.csproj", "{2603E2E5-F884-4B3B-988F-75095B7BF933}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnicaReporteDeTiempo.Api.Application", "PruebaTecnicaReporteDeTiempo.Api.Application\PruebaTecnicaReporteDeTiempo.Api.Application.csproj", "{3E0E1F21-82B8-454D-B735-6A3B73F5F723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnicaReporteDeTiempo.Api.ApplicationServices", "PruebaTecnicaReporteDeTiempo.Api.ApplicationServices\PruebaTecnicaReporteDeTiempo.Api.ApplicationServices.csproj", "{166D36F7-B9C8-429A-BAF8-128D950BF4A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{2603E2E5-F884-4B3B-988F-75095B7BF933}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2603E2E5-F884-4B3B-988F-75095B7BF933}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2603E2E5-F884-4B3B-988F-75095B7BF933}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E0E1F21-82B8-454D-B735-6A3B73F5F723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E0E1F21-82B8-454D-B735-6A3B73F5F723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E0E1F21-82B8-454D-B735-6A3B73F5F723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E0E1F21-82B8-454D-B735-6A3B73F5F723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166D36F7-B9C8-429A-BAF8-128D950BF4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166D36F7-B9C8-429A-BAF8-128D950BF4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166D36F7-B9C8-429A-BAF8-128D950BF4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166D36F7-B9C8-429A-BAF8-128D950BF4A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

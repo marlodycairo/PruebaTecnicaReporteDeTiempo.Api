@@ -14,5 +14,7 @@ namespace PruebaTecnicaReporteDeTiempo.Api.Infrastructure.Context
 
         public DbSet<Actividades> Actividades { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<Rol> Rol { get; set; }
+        public DbSet<UsuarioRol> UsuarioRol { get; set; }
     }
 }

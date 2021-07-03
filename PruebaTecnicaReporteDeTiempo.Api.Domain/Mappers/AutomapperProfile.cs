@@ -16,6 +16,12 @@ namespace PruebaTecnicaReporteDeTiempo.Api.Domain.Mappers
 
             CreateMap<Usuarios, UsuariosViewModel>();
             CreateMap<UsuariosViewModel, Usuarios>();
+
+            CreateMap<Rol, RolViewModel>();
+            CreateMap<RolViewModel, Rol>();
+
+            CreateMap<UsuarioRol, UsuarioRolViewModel>();
+            CreateMap<UsuarioRolViewModel, UsuarioRol>();
         }
     }
 }

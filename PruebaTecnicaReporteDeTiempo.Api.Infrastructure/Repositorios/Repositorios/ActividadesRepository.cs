@@ -44,5 +44,14 @@ namespace PruebaTecnicaReporteDeTiempo.Api.Infrastructure.Repositorios.Repositor
         {
             return context.Actividades.Find(id);
         }
+
+        public List<Actividades> GetActivitiesByUser(string idUser)
+        {
+            return (from user in context.Usuarios
+                    join actividad in context.Actividades
+                    on user.Id equals actividad.IdUsuario
+                    where user.Usuario == idUser
+                    select actividad).ToList();
+        }
     }
 }

@@ -1,35 +1,34 @@
 ﻿using AutoMapper;
+using PruebaTecnicaReporteDeTiempo.Api.Application;
 using PruebaTecnicaReporteDeTiempo.Api.Domain;
 using PruebaTecnicaReporteDeTiempo.Api.Domain.Models;
 using PruebaTecnicaReporteDeTiempo.Api.Infrastructure.Entities;
-using PruebaTecnicaReporteDeTiempo.Api.Infrastructure.Repositorios.IRepositorios;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
-namespace PruebaTecnicaReporteDeTiempo.Api.DomainServices
+namespace PruebaTecnicaReporteDeTiempo.Api.ApplicationServices
 {
-    public class ActividadesDomainService : IActividadesDomain
+    public class ActividadesApplicationService : IActividadesApplication
     {
-        private readonly IActividadesRepository actividadesRepository;
+        private readonly IActividadesDomain actividadesDomain;
         private readonly IMapper mapper;
 
-        public ActividadesDomainService(IActividadesRepository actividadesRepository, IMapper mapper)
+        public ActividadesApplicationService(IActividadesDomain actividadesDomain, IMapper mapper)
         {
-            this.actividadesRepository = actividadesRepository;
+            this.actividadesDomain = actividadesDomain;
             this.mapper = mapper;
         }
         public string Create(Actividades actividades)
         {
-            actividadesRepository.Create(actividades);
+            actividadesDomain.Create(actividades);
             var result = mapper.Map<ActividadesViewModel>(actividades);
             return result.ToString();
         }
 
         public IEnumerable<ActividadesViewModel> GetAll()
         {
-            var actividades = actividadesRepository.GetAll();
+            var actividades = actividadesDomain.GetAll();
 
             var result = mapper.Map<IEnumerable<ActividadesViewModel>>(actividades);
 
@@ -38,7 +37,7 @@ namespace PruebaTecnicaReporteDeTiempo.Api.DomainServices
 
         public ActividadesViewModel GetById(int id)
         {
-            var actividad = actividadesRepository.GetById(id);
+            var actividad = actividadesDomain.GetById(id);
 
             var result = mapper.Map<ActividadesViewModel>(actividad);
 
@@ -47,7 +46,7 @@ namespace PruebaTecnicaReporteDeTiempo.Api.DomainServices
 
         public List<Actividades> GetActivitiesByUser(string idUser)
         {
-            return actividadesRepository.GetActivitiesByUser(idUser);
+            return actividadesDomain.GetActivitiesByUser(idUser);
         }
     }
 }

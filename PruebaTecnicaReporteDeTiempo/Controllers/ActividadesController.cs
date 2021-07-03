@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PruebaTecnicaReporteDeTiempo.Api.Application;
 using PruebaTecnicaReporteDeTiempo.Api.Domain;
 using PruebaTecnicaReporteDeTiempo.Api.Domain.Models;
 using PruebaTecnicaReporteDeTiempo.Api.Infrastructure.Entities;
@@ -14,39 +16,50 @@ namespace PruebaTecnicaReporteDeTiempo.Api.Controllers
     [ApiController]
     public class ActividadesController : ControllerBase
     {
-        private readonly IActividadesDomain actividadesDomain;
+        private readonly IActividadesApplication actividadesApplication;
 
-        public ActividadesController(IActividadesDomain actividadesDomain)
+        public ActividadesController(IActividadesApplication actividadesApplication)
         {
-            this.actividadesDomain = actividadesDomain;
+            this.actividadesApplication = actividadesApplication;
         }
 
         [HttpGet]
+        [Authorize]
         public IEnumerable<ActividadesViewModel> VerActividades()
         {
-            return actividadesDomain.GetAll();
+            return actividadesApplication.GetAll();
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult CrearActividad(Actividades actividades)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            actividadesDomain.Create(actividades);
+            actividadesApplication.Create(actividades);
 
             return Ok();
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<ActividadesViewModel> DetallesActividad(int id)
+        //[HttpGet("{id}")]
+        //[Authorize]
+        //public ActionResult<ActividadesViewModel> DetallesActividad(int id)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return actividadesApplication.GetById(id);
+        //}
+
+        [HttpGet("{idUser}")]
+        [Authorize]
+        public List<Actividades> GetActivitiesByUser(string idUser)
         {
-            if (!ModelState.IsValid)
-            {
-                return NotFound();
-            }
-            return actividadesDomain.GetById(id);
+            return actividadesApplication.GetActivitiesByUser(idUser);
         }
     }
 }
+

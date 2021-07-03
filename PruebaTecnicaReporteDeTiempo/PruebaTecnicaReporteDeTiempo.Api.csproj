@@ -20,6 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PruebaTecnicaReporteDeTiempo.Api.ApplicationServices\PruebaTecnicaReporteDeTiempo.Api.ApplicationServices.csproj" />
+    <ProjectReference Include="..\PruebaTecnicaReporteDeTiempo.Api.Application\PruebaTecnicaReporteDeTiempo.Api.Application.csproj" />
     <ProjectReference Include="..\PruebaTecnicaReporteDeTiempo.Api.DomainServices\PruebaTecnicaReporteDeTiempo.Api.DomainServices.csproj" />
     <ProjectReference Include="..\PruebaTecnicaReporteDeTiempo.Api.Domain\PruebaTecnicaReporteDeTiempo.Api.Domain.csproj" />
     <ProjectReference Include="..\PruebaTecnicaReporteDeTiempo.Api.Infrastructure\PruebaTecnicaReporteDeTiempo.Api.Infrastructure.csproj" />
